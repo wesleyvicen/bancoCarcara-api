@@ -8,6 +8,10 @@ import model.Conta;
 
 public class ContaRepository {
 	public List<Conta> contas = new ArrayList<Conta>();
+	public ContaRepository() {
+		contas.add(new Conta(TipoConta.CB.getDescricao(), "jpsilva", TipoConta.CB));
+		contas.add(new Conta(TipoConta.CC.getDescricao(), "jpsilva", TipoConta.CC));
+	}
 	public void addConta(Conta conta) {
 		contas.add(conta);		
 	}

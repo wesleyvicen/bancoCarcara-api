@@ -6,7 +6,7 @@ package model;
 import dto.UsuarioDto;
 
 /**
- * @author Bárbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
+ * @author Bï¿½rbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
  *         Renan Alencar, Wesley Vicente
  *
  */
@@ -20,7 +20,7 @@ public class Usuario {
 		
 	}
 	
-	public Usuario(int id, String login, String senha, String nome, String cpf) {
+	public Usuario(String login, String senha, String nome, String cpf) {
 		super();
 		this.login = login;
 		this.senha = senha;
