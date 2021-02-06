@@ -10,8 +10,8 @@ public class Sistema {
 	public static void main(String[] args) {
 		//Rota de cadastro
 		
-		//CadastroService cadastroService = new CadastroService();
-		//cadastroService.Cadastrar(new UsuarioDto("12530952728", "Gabriel Carreiras Botelho", "GabrielBotelho", "Gabriel123"));
+		CadastroService cadastroService = new CadastroService();
+		System.out.println(cadastroService.Cadastrar(new UsuarioDto("12530952728", "Gabriel Carreiras Botelho", "GabrielBotelho", "Gabriel123")));
 		
 		//Login
 		LoginService loginService = new LoginService();

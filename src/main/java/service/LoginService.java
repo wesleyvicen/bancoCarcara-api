@@ -13,13 +13,14 @@ import repository.UsuarioRepository;
 public class LoginService {
 	UsuarioRepository usuarioRepository;
 	ContaRepository contaRepository;
+
 	public SessaoDto Logar(LoginDto loginDto) {
 		SessaoDto sessaoDto = new SessaoDto();
 		usuarioRepository = new UsuarioRepository();
 		contaRepository = new ContaRepository();
 		Usuario usuario = usuarioRepository.getUser(loginDto.getUsuario(), loginDto.getSenha());
 		sessaoDto.setUsuario(new UsuarioDto(usuario));
-		Conta contaDebito = contaRepository.getConta(loginDto.getUsuario(), TipoConta.CB);		
+		Conta contaDebito = contaRepository.getConta(loginDto.getUsuario(), TipoConta.CB);
 		sessaoDto.setContaDebito(new ContaDto(contaDebito));
 		Conta contaCredito = contaRepository.getConta(loginDto.getUsuario(), TipoConta.CC);
 		sessaoDto.setContaCredito(new ContaDto(contaCredito));
