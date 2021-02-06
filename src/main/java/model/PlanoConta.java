@@ -3,10 +3,10 @@
  */
 package model;
 
-import utils.TipoLancamento;
+import enums.TipoLancamento;
 
 /**
- * @author Bárbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
+ * @author Bï¿½rbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
  *         Renan Alencar, Wesley Vicente
  *
  */

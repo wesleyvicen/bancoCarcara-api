@@ -3,10 +3,12 @@
  */
 package model;
 
-import utils.TipoConta;
+import java.util.List;
+
+import enums.TipoConta;
 
 /**
- * @author Bárbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
+ * @author Bï¿½rbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
  *         Renan Alencar, Wesley Vicente
  *
  */
@@ -14,15 +16,23 @@ public class Conta {
 	private int id;
 	private String descricao;
 	private String loginUsuario;
-	private double saldo;
+	private double saldo = 0;
 	private TipoConta tipoConta;
-
+	private List<Lancamento> lancamentos;	
+	
 	public Conta(int id, String descricao, String loginUsuario, double saldo, TipoConta tipoConta) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.loginUsuario = loginUsuario;
 		this.saldo = saldo;
+		this.tipoConta = tipoConta;
+	}
+	
+	public Conta(String descricao, String loginUsuario, TipoConta tipoConta) {
+		super();		
+		this.descricao = descricao;
+		this.loginUsuario = loginUsuario;		
 		this.tipoConta = tipoConta;
 	}
 
@@ -64,6 +74,14 @@ public class Conta {
 
 	public void setTipoConta(TipoConta tipoConta) {
 		this.tipoConta = tipoConta;
+	}
+	
+	public List<Lancamento> getLancamentos() {
+		return lancamentos;
+	}
+
+	public void setLancamentos(List<Lancamento> lancamentos) {
+		this.lancamentos = lancamentos;
 	}
 
 }

@@ -3,6 +3,8 @@
  */
 package model;
 
+import dto.UsuarioDto;
+
 /**
  * @author Bárbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
  *         Renan Alencar, Wesley Vicente
@@ -14,12 +16,23 @@ public class Usuario {
 	private String nome;
 	private String cpf;
 
+	public Usuario() {
+		
+	}
+	
 	public Usuario(int id, String login, String senha, String nome, String cpf) {
 		super();
 		this.login = login;
 		this.senha = senha;
 		this.nome = nome;
 		this.cpf = cpf;
+	}
+	
+	public Usuario(UsuarioDto usuarioDto) {
+		this.login = usuarioDto.getLogin();
+		this.senha = usuarioDto.getSenha();
+		this.nome = usuarioDto.getNome();
+		this.cpf = usuarioDto.getCpf();
 	}
 
 	public String getLogin() {

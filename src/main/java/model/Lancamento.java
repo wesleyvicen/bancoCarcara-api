@@ -3,10 +3,10 @@
  */
 package model;
 
-import utils.TipoConta;
+import enums.TipoConta;
 
 /**
- * @author Bárbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
+ * @author Bï¿½rbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo,
  *         Renan Alencar, Wesley Vicente
  *
  */
